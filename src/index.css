@@ -1,0 +1,54 @@
+:root {
+  height: 100%;
+  min-width: 280px;
+
+  --font-family-text: "Open Sans", "Arial", "Helvetica", sans-serif;
+  --font-family-stylized: "Roboto Mono", "DejaVu Sans Mono", "Consolas", monospace;
+  --color-text-default: rgb(0, 0, 0);
+  --color-background: rgb(252, 252, 252);
+
+  --side-offset: 6rem;
+  --header-top-offset: 5rem;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--font-family-stylized);
+  color: var(--color-text-default);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+  min-height: 100vh;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --side-offset: 3rem;
+  }
+}
+@media (max-width: 860px) {
+  :root {
+    --header-top-offset: 2rem;
+    --side-offset: 1.5rem;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --header-top-offset: 1rem;
+    font-size: 130%;
+  }
+}
+
+.header_title {
+  font-family: var(--font-family-stylized);
+  font-size: 1.7rem;
+  font-weight: 600;
+  flex-basis: 40%;
+  margin: 0 0 0.5rem;
+}
